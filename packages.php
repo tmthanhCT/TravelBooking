@@ -51,7 +51,7 @@ $packages = $pdo->query("SELECT * FROM packages ORDER BY id DESC")->fetchAll(PDO
                             <small class="fa fa-star text-primary"></small>
                             <small class="fa fa-star text-primary"></small>
                         </div>
-                        <p class="mb-4">Destination: <?= htmlspecialchars($p['Destination']) ?>. Max people:
+                        <p class="mb-4">Destination: <?= htmlspecialchars($p['Destination']) ?> <br> Max people:
                             <?= $p['max_people'] ?>.</p>
                     </div>
                     <div class="row bg-primary rounded-bottom mx-0">

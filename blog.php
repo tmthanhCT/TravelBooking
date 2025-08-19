@@ -91,7 +91,7 @@ $packages = $pdo->query("SELECT p.*, i.image_url FROM packages p LEFT JOIN image
                         $detailUrl = $file ? "Details-Packages/$file" : '#';
                         ?>
                         <a href="<?= $detailUrl ?>" class="h4"><?= htmlspecialchars($p['Name_Package']) ?></a>
-                        <p class="my-3">Destination: <?= htmlspecialchars($p['Destination']) ?>. Duration:
+                        <p class="my-3">Destination: <?= htmlspecialchars($p['Destination']) ?> <br> Duration:
                             <?= htmlspecialchars($p['duration']) ?> days.</p>
                         <a href="<?= $detailUrl ?>" class="btn btn-primary rounded-pill py-2 px-4">Read More</a>
                     </div>
