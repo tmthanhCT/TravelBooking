@@ -136,7 +136,7 @@ $packagesList = $pdo->query("SELECT * FROM packages ORDER BY id DESC")->fetchAll
                             <a href="<?= $detailUrl ?>" class="btn-hover btn text-white py-2 px-4">Read More</a>
                         </div>
                         <div class="col-6 text-end px-0">
-                            <a href="Booking.php" class="btn-hover btn text-white py-2 px-4">Book Now</a>
+                            <a href="<?= APP_URL ?>/booking.php" class="btn-hover btn text-white py-2 px-4">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -240,10 +240,11 @@ $packagesList = $pdo->query("SELECT * FROM packages ORDER BY id DESC")->fetchAll
                 </div>
                 <?php endif; ?>
                 <?php if (!isset($_SESSION['user_id'])): ?>
-                <div class="alert alert-warning">You must be <a href="authentication-login.php">logged in</a> to
+                <div class="alert alert-warning">You must be <a "<?= APP_URL ?>/authentication-login.php">logged in</a>
+                    to
                     book a
                     tour.</div>
-                <a href="authentication-login.php" class="btn btn-primary">Login</a>
+                <a "<?= APP_URL ?>/authentication-login.php" class="btn btn-primary">Login</a>
                 <?php else: ?>
                 <form method="post" autocomplete="off">
                     <div class="row g-3">

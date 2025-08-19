@@ -62,14 +62,15 @@
                         ?>
                         <span class="me-3 text-light"><i class="fa fa-user me-2"></i>Hi,
                             <b><?= htmlspecialchars($displayName) ?></b></span>
-                        <a href="account-profile.php" class="me-3 text-light"><i
-                                class="fa fa-home me-2"></i>Dashboard</a>
-                        <a href="logout.php" class="text-light"><i class="fas fa-power-off me-2"></i>Logout</a>
+                        <a href="<?= APP_URL ?>/account-profile.php"
+                            class="nav-item nav-link<?= $current_page == 'acccount-profile.php' ? ' active' : '' ?>">Dashboard</a>
+                        <a href="<?= APP_URL ?>/logout.php"
+                            class="nav-item nav-link<?= $current_page == 'logout.php' ? ' active' : '' ?>">Logout</a>
                         <?php } else { ?>
-                        <a href="authentication-register.php"><small class="me-3 text-light"><i
-                                    class="fa fa-user me-2"></i>Register</small></a>
-                        <a href="authentication-login.php"><small class="me-3 text-light"><i
-                                    class="fa fa-sign-in-alt me-2"></i>Login</small></a>
+                        <a href="<?= APP_URL ?>/authentication-register.php"
+                            class="nav-item nav-link<?= $current_page == 'authentication-register.php' ? ' active' : '' ?>">Register</a>
+                        <a href="<?= APP_URL ?>/login.php"
+                            class="nav-item nav-link<?= $current_page == 'login.php' ? ' active' : '' ?>">Logout</a>
                         <?php } ?>
                     </div>
                 </div>
